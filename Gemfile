@@ -52,3 +52,6 @@ end
 group :production do
   gem 'pg'
 end
+
+#Pokemon Gem
+gem 'pokemon_tcg_sdk'

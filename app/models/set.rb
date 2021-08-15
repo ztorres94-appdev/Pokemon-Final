@@ -1,0 +1,4 @@
+class Set < ApplicationRecord
+
+  
+end
