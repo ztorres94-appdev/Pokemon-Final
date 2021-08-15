@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.pokemontcg.io/v2/cards/zzzz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 23 Feb 2021 21:46:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d8b6ee342b2a29ccde15901f6e5a101001614116800; expires=Thu, 25-Mar-21
+        21:46:40 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 827da647-c9f2-4793-b096-d32c8bd82392
+      X-Runtime:
+      - '0.031448'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '087274dfba0000f01598af8000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=78Liww9y9wdehYEyDH5CBdVQ%2FQoRnIhoJOq8%2B1%2FaLBNlpEYX21ixbUBJqpFfa9c83FofOepHsF2GgwgTSCxZHb0EzY%2BVtgf6Q6Qc9IPtWuTbrw%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 62642412ce35f015-EWR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"message":"The requested resource was not found.","code":404}}'
+  recorded_at: Tue, 23 Feb 2021 21:46:40 GMT
+recorded_with: VCR 6.0.0

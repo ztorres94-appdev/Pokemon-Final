@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.pokemontcg.io/v2/supertypes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 23 Feb 2021 21:46:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d50ee110afc7e591625d06a543426afb01614116800; expires=Thu, 25-Mar-21
+        21:46:40 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"d57dfb664eed1f61f897425db8d906e1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 70c3bbe5-f7c8-4f7e-8bea-d426578bad83
+      X-Runtime:
+      - '0.040890'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '087274decb0000495d06895000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=8ZNvUV5wSDXiBD6oelAsL4ng3EU4s%2FeqGnyvtRkpIKigyBoF2lIOrBJaSp2tWp5aGkQ6Q994%2BR5TVfVrQUvW97shopon9%2BaX9uY2VZpO%2BheUiA%3D%3D"}],"max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 626424114e67495d-STL
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjpbIkVuZXJneSIsIlBva8OpbW9uIiwiVHJhaW5lciJdfQ==
+  recorded_at: Tue, 23 Feb 2021 21:46:40 GMT
+recorded_with: VCR 6.0.0
