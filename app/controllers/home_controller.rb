@@ -12,8 +12,9 @@ end
 
 def card
 
-  @cards = Pokemon::Card.find('xy1-1')
+  all_cards = Pokemon::Card
 
+  @cards = all_cards.where(q: 'name:Zacian' )
 
 
 
