@@ -1,38 +1,26 @@
-<h1> Choose a set </h1>
+<h1> Pokemon Deck Builder </h1>
 
 
-<table class="table" border="1">
-  <tr>
-    <th>
-    </th>
-    <th>
-      Set Name
-    </th>
-        <% #Blank %>
-    <th>
-      Series
-    </th>
+<h2> Choose a Search Option <h2>
 
-    <th>
-     Release Date
-    </th>
-  </tr>
+<div>
+<h2> View All... </h2>
+<ul>
+  <li>
+    <a href="/sets" >
+    Sets
+  </li>
+  <li>
+    <a href="/cards" >
+    Cards
+  </li>
+    <li>
+    <a href="/types" >
+    Types
+  </li>
+</ul>
+</div>
 
-  <% @list_of_sets.each do |a_set| %>
-  <tr>
-    <th>
-    <img src= <%= a_set.images.symbol %>>
-    </th>
-    <th>
-    <%= a_set.name %>
-    </th>
-     <th>
-    <%= a_set.series %>
-    </th>
-     <th>
-    <%= a_set.release_date %>
-    </th>
+<hr>
 
-  </tr>
-  <% end %>
-</table>
+<h2> Search by... </h2>

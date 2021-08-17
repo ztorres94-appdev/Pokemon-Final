@@ -1,0 +1,38 @@
+<h1> Choose a card </h1>
+
+
+<table class="table" border="1">
+  <tr>
+    <th>
+    </th>
+    <th>
+      Pokemon Name
+    </th>
+        <% #Blank %>
+    <th>
+      Series
+    </th>
+
+    <th>
+     Release Date
+    </th>
+  </tr>
+
+  <% @cards.each do |a_card| %>
+  <tr>
+    <th>
+    <img src= <%= a_card.images.small %>>
+    </th>
+    <th>
+    <%= a_card.name %>
+    </th>
+     <th>
+    <%= a_card.id %>
+    </th>
+     <th>
+    <%= a_card.supertype %>
+    </th>
+
+  </tr>
+  <% end %>
+</table>
