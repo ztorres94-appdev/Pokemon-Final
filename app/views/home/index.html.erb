@@ -21,13 +21,29 @@
 
 <hr>
 
-<h2> Search by... </h2>
+<h1> Advance Search... </h1>
 
-<ul>
-  <li>
-    <a href="/cards" > 
-    Cards
-    </a>
-  </li>
-</ul>
+<div>
+<h2> List of Sets </h2>
+    <form action="/search" method="post">
+    
+    <select name="query_set_id" id="set_id_box">
+
+    <% @list_of_sets.each do |a_set| %>
+
+    <option value="<%= a_set.id%>" >
+      <%= a_set.name %>
+
+    </option>
+
+    <% end %>
+     </select>
+
+
+
+      <button>
+        Search for Cards!
+      </button>
+
+    </form>
 

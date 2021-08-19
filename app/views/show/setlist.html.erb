@@ -41,10 +41,15 @@
      <th>
     <%= a_card.id %>
     </th>
-     <th>
-    <%= a_card.types %>
-    </th>
-
+    <% if a_card.types == nil %>
+          <th>
+          Energy/Trainer
+          </th>
+      <% else%>   
+          <th>
+          <%= a_card.types.first %>
+          </th>
+      <%end %>
     <th>
     <a href="/pokemon/<%= a_card.id %>" >
     View card info 

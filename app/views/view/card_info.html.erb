@@ -5,7 +5,7 @@
 <img src= <%= @card.images.small %> >
 
 <hr>
-<%if @card.abilities.at(0) == nil %>
+<%if @card.abilities == nil %>
    <h2> No Ability </h2>
   <% else %>
   <h2> Ability </h2>
