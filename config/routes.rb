@@ -15,5 +15,7 @@ get("/types", { :controller => "choose", :action => "type" })
 #Show
 get("/types/:type", { :controller => "show", :action => "show_type" })
 
+get("/sets/:set", { :controller => "show", :action => "setlist" })
+
 
 end

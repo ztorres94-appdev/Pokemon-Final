@@ -1,6 +1,8 @@
 <h1> Choose a card </h1>
 
 
+
+
 <table class="table" border="1">
   <tr>
     <th>
@@ -28,7 +30,7 @@
 
   </tr>
 
-  <% @cards.each do |a_card| %>
+  <% @setlist.each do |a_card| %>
   <tr>
     <th>
     <img src= <%= a_card.images.small %>>
@@ -40,7 +42,7 @@
     <%= a_card.id %>
     </th>
      <th>
-    <%= a_card.set.name %>
+    <%= a_card.types %>
     </th>
 
     <th>

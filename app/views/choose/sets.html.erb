@@ -16,12 +16,16 @@
     <th>
      Release Date
     </th>
+    <th>
+     Set List
+    </th>
+
   </tr>
 
   <% @list_of_sets.each do |a_set| %>
   <tr>
     <th>
-    <img src= <%= a_set.images.symbol %>>
+   <img src= <%= a_set.images.logo %> width="200" height="100" alt="" >
     </th>
     <th>
     <%= a_set.name %>
@@ -32,6 +36,12 @@
      <th>
     <%= a_set.release_date %>
     </th>
+
+    <th>
+    <a href="/sets/<%= a_set.id %>" >
+    View this set list 
+    </th>
+
 
   </tr>
   <% end %>

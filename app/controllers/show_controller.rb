@@ -12,6 +12,20 @@ def show_type
   
 end
 
+def setlist
+  the_set = params.fetch("set")
+
+ 
+  
+  all_cards = Pokemon::Card
+
+  @setlist = all_cards.where(q: "set.id:#{the_set}")
+
+  render({ :template => "show/setlist.html.erb" })
+
+
+end
+
 
   
 end
