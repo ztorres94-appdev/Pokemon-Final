@@ -18,7 +18,7 @@ def show_type
     
   end
 
-  render({ :template => "show/card_show.html.erb" })
+  render({ :template => "show/type_show.html.erb" })
 
   
 end

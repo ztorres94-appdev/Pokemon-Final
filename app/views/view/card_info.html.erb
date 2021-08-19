@@ -1,0 +1,65 @@
+<h1> <%= @card.name %> </h1>
+
+<hr>
+
+<img src= <%= @card.images.small %> >
+
+<hr>
+<%if @card.abilities.at(0) == nil %>
+   <h2> No Ability </h2>
+  <% else %>
+  <h2> Ability </h2>
+  <%= @card.abilities.at(0).text %>
+
+  <% if @card.abilities.at(1) == nil %>
+    <% #Blank %>
+  <% else %>
+    <div>
+    <%= @card.abilities.at(1).text %>
+    </div>
+  <% end %>
+<% end %>
+
+<hr>
+<h2> Attacks </h2>
+<table class="table" border="1">
+  <tr>
+    <th>
+      Attack Name
+    </th>
+    <th>
+     Text
+    </th>
+     <th>
+     Damage
+    </th>
+     <th>
+     Energy Cost
+    </th>
+  </tr>
+
+<% @card.attacks.each do |attack| %>
+<tr>
+  <th>
+    <%= attack.name %>
+  </th>
+
+  <th>
+    <%= attack.text %>
+  </th>
+  <th>
+    <%= attack.damage %>
+  </th>
+
+  <th>
+    <%= attack.cost %>
+  </th>
+
+</tr>
+<% end %>
+</table>
+ 
+
+
+
+

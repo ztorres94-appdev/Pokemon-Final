@@ -17,5 +17,10 @@ get("/types/:type", { :controller => "show", :action => "show_type" })
 
 get("/sets/:set", { :controller => "show", :action => "setlist" })
 
+#Info
+
+get("/pokemon/:id", { :controller => "view", :action => "card_info" })
+
+
 
 end
