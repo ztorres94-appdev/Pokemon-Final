@@ -7,7 +7,11 @@ def index
   @types = Pokemon::Type.all
 
   @list_of_sets = all_sets
-  
+
+  @supertypes = Pokemon::Supertype.all
+
+
+
   render({ :template => "home/index.html.erb" })
 
   

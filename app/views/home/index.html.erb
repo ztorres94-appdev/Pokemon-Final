@@ -39,6 +39,18 @@
     <% end %>
      </select>
 
+    <select name="query_type_id" id="type_id_box">
+
+    <% @supertypes.each do |a_type| %>
+<div>
+    <option value="<%= a_type%>" >
+      <%= a_type %>
+
+    </option>
+</div>
+    <% end %>
+     </select>
+
 
 
       <button>
@@ -47,3 +59,6 @@
 
     </form>
 
+<hr>
+
+<h2> Search by Name </h2>

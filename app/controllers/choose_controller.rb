@@ -19,7 +19,7 @@ def card
 
   all_cards = Pokemon::Card
 
-  @cards = all_cards.where(q: 'name:Zacian' )
+  @cards = all_cards.where(q: 'name:Durant' )
 
 
 
@@ -36,7 +36,6 @@ def type
   
   @supertypes = Pokemon::Supertype.all
 
-  
 
   render({ :template => "choose/type.html.erb" })
 end
