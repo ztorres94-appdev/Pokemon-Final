@@ -33,11 +33,20 @@ end
 
 def name
 
-@name = params.fetch("query_name")
+name = params.fetch("query_name")
+split_name = name.split
 
 all_cards = Pokemon::Card
 
-@search_results = all_cards.where(q: "name:"+"#{@name}")
+if split_name.second == nil
+
+@search_results = all_cards.where(q: "name:"+"#{name}")
+
+else
+first = split_name.first
+second = split_name.second
+@search_results = all_cards.where(q: "name:#{first} name:#{second}")
+end
 
 
 render({ :template => "home/search.html.erb" })
