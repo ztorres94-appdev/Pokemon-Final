@@ -3892,3 +3892,262 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 1416ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 10792)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+Started GET "/?vscodeBrowserReqId=1629427624271" for 10.68.6.3 at 2021-08-20 02:47:04 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Parameters: {"vscodeBrowserReqId"=>"1629427624271"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 912)
+Completed 200 OK in 2171ms (Views: 741.8ms | ActiveRecord: 0.0ms | Allocations: 375367)
+
+
+Started GET "/" for 10.68.6.3 at 2021-08-20 02:47:06 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1284ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 10643)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:00:20 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 784)
+Completed 200 OK in 1401ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 11938)
+
+
+Started POST "/search" for 10.68.6.3 at 2021-08-20 03:00:27 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:03:36 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 778)
+Completed 200 OK in 1305ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 11899)
+
+
+Started GET "/search?query_set_id=swsh2&query_type_id=Pok%C3%A9mon" for 10.68.6.3 at 2021-08-20 03:03:43 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"query_set_id"=>"swsh2", "query_type_id"=>"Pokémon"}
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.6ms | Allocations: 344)
+Completed 200 OK in 244ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3193)
+
+
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:04:58 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 496)
+Completed 200 OK in 1274ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 10983)
+
+
+Started GET "/search?query_set_id=swsh2&query_type_id=Trainer" for 10.68.6.3 at 2021-08-20 03:05:09 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"query_set_id"=>"swsh2", "query_type_id"=>"Trainer"}
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.2ms | Allocations: 225)
+Completed 200 OK in 1071ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 7680)
+
+
+Started GET "/search?query_set_id=swsh2&query_type_id=Pok%C3%A9mon" for 10.68.6.3 at 2021-08-20 03:05:20 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"query_set_id"=>"swsh2", "query_type_id"=>"Pokémon"}
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1762)
+Completed 200 OK in 5098ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 36041)
+
+
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:06:16 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 786)
+Completed 200 OK in 1410ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 11942)
+
+
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:07:18 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 782)
+Completed 200 OK in 1321ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 11906)
+
+
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:07:45 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 782)
+Completed 200 OK in 1331ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 11916)
+
+
+Started GET "/search?query_set_id=base1&query_type_id=Energy" for 10.68.6.3 at 2021-08-20 03:08:37 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"query_set_id"=>"base1", "query_type_id"=>"Energy"}
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.8ms | Allocations: 385)
+Completed 200 OK in 665ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 6206)
+
+
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:09:56 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 784)
+Completed 200 OK in 1766ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 11914)
+
+
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:10:16 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 786)
+Completed 200 OK in 1809ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 11911)
+
+
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:10:30 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 788)
+Completed 200 OK in 1631ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 12378)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:34:49 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+render({ :template => "home/search.html.erb" })
+                       ^~~~
+/workspace/Pokemon-Final/app/controllers/home_controller.rb:43: syntax error, unexpected tSTRING_BEG, expecting end
+...plate => "home/search.html.erb" })
+...                              ^
+/workspace/Pokemon-Final/app/controllers/home_controller.rb:46: unterminated string meets end of file
+/workspace/Pokemon-Final/app/controllers/home_controller.rb:46: syntax error, unexpected end-of-input, expecting end:
+  app/controllers/home_controller.rb:43:in `'
+
+Started POST "/__better_errors/4a0eb8688f399d83/variables" for 10.68.6.3 at 2021-08-20 03:34:49 +0000
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:35:29 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+SyntaxError - syntax error, unexpected end-of-input, expecting end:
+  app/controllers/home_controller.rb:46:in `'
+
+Started POST "/__better_errors/bf0b2c58c9e2071a/variables" for 10.68.6.3 at 2021-08-20 03:35:30 +0000
+Started GET "/" for 10.68.6.3 at 2021-08-20 03:35:37 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 792)
+Completed 200 OK in 1296ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 12105)
+
+
+Started GET "/name?query_name=Zacian" for 10.68.6.3 at 2021-08-20 03:35:43 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Zacian"}
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 409)
+Completed 200 OK in 686ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 5992)
+
+
+Started GET "/name?query_name=Charizard" for 10.68.6.3 at 2021-08-20 03:36:00 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Charizard"}
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 703)
+Completed 200 OK in 2412ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 16822)
+
+
+Started GET "/name?query_name=Zacian+V" for 10.68.6.3 at 2021-08-20 03:36:15 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Zacian V"}
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.0ms | Allocations: 2164)
+
+
+
+RuntimeError - Something went wrong...please try again later.:
+  app/controllers/home_controller.rb:40:in `name'
+
+Started POST "/__better_errors/e5f2354e812859c5/variables" for 10.68.6.3 at 2021-08-20 03:36:16 +0000
+Started GET "/name?query_name=catcher" for 10.68.6.3 at 2021-08-20 03:40:40 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"catcher"}
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 827ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 6079)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)

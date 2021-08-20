@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
 get("/", { :controller => "home", :action => "index" })
 
+get("/search", { :controller => "home", :action => "search" })
+
+get("/name", { :controller => "home", :action => "name" })
 
 #Choose
 get("/sets", { :controller => "choose", :action => "sets" })

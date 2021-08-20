@@ -21,11 +21,11 @@
 
 <hr>
 
-<h1> Advance Search... </h1>
+<h1> Filter by... </h1>
 
 <div>
 <h2> List of Sets </h2>
-    <form action="/search" method="post">
+    <form action="/search" method="get">
     
     <select name="query_set_id" id="set_id_box">
 
@@ -39,26 +39,38 @@
     <% end %>
      </select>
 
+    
     <select name="query_type_id" id="type_id_box">
 
     <% @supertypes.each do |a_type| %>
-<div>
+
     <option value="<%= a_type%>" >
       <%= a_type %>
 
     </option>
-</div>
+
+
     <% end %>
      </select>
 
 
-
+    <div>
       <button>
         Search for Cards!
       </button>
+    </div>
 
     </form>
 
 <hr>
 
-<h2> Search by Name </h2>
+<h2> Search by Name... </h2>
+
+<form action="/name" method="get">
+<input type="text" id="name_box" name="query_name">
+
+    <div>
+      <button>
+        Search by name!
+      </button>
+    </div>
