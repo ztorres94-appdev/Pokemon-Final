@@ -5,16 +5,16 @@ def show_type
 
   all_cards = Pokemon::Card
 
-  if the_type == "trainer"
+  if the_type == "Trainer"
 
     @list_of_cards = all_cards.where(q: "supertype:#{the_type}")
 
-  elsif the_type == "energy"
+  elsif the_type == "Energy"
     @list_of_cards = all_cards.where(q: "supertype:#{the_type}")
     
   else
 
-    @list_of_cards = all_cards.where(q: "type:#{the_type}")
+    @list_of_cards = all_cards.where(q: "types:#{the_type}")
     
   end
 
