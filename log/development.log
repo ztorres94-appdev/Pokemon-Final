@@ -4728,3 +4728,54 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 1273ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 10662)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+Started GET "/?vscodeBrowserReqId=1629567496696" for 10.68.8.3 at 2021-08-21 17:38:16 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Parameters: {"vscodeBrowserReqId"=>"1629567496696"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 921)
+Completed 200 OK in 1952ms (Views: 432.1ms | ActiveRecord: 0.0ms | Allocations: 375227)
+
+
+Started GET "/" for 10.68.8.3 at 2021-08-21 17:38:21 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 496)
+Completed 200 OK in 1272ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 10629)
+
+
+Started GET "/" for 10.68.8.3 at 2021-08-21 17:41:02 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1283ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 10653)
+
+
+Started GET "/sets" for 10.68.8.3 at 2021-08-21 17:41:04 +0000
+Processing by ChooseController#sets as HTML
+  Rendering choose/sets.html.erb within layouts/application
+  Rendered choose/sets.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1440)
+Completed 200 OK in 1150ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 10941)
+
+
+Started GET "/sets/base1" for 10.68.8.3 at 2021-08-21 17:41:06 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"base1"}
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1295)
+Completed 200 OK in 3263ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 20314)
+
+
