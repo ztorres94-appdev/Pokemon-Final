@@ -14,10 +14,12 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
   </head>
-
-  <a href="/" >
+<a href="/" >
    Homepage
    </a>
+
+  <% session.fetch(:user_id) %>
+  <% if session.fetch( :user_id) == nil  %>
    <div>
  <a href="/sign_up" >
    Sign Up
@@ -28,6 +30,20 @@
    Login
    </a>
 </div>
+
+<% else %>
+<div>
+ <a href="/decklist" >
+   My Decklist
+   </a>
+   </div>
+<div>
+ <a href="/sign_out" >
+   Sign Out
+   </a>
+</div>
+
+<%end %>
    <hr>
 
 

@@ -64,6 +64,12 @@ get("/sign_out", { :controller => "user_authentication", :action => "goodbye" })
    post("/insert_user", { :controller => "user_authentication", :action => "create"  })
   # AUTHENTICATE AND STORE COOKIE
     post("/user_verify_credentials", { :controller => "user_authentication", :action => "create_cookie" })
-   
+
+
+#Decklists
+
+get("/decklist", { :controller => "decklist", :action => "view" })
+
+post("/insert_card", { :controller => "decklist", :action => "add" })
 
 end
