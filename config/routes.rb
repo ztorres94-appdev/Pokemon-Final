@@ -25,5 +25,17 @@ get("/sets/:set", { :controller => "show", :action => "setlist" })
 get("/pokemon/:id", { :controller => "view", :action => "card_info" })
 
 
+#User Login
+
+get("/sign_up", { :controller => "user", :action => "sign_up" })
+
+get("/sign_in", { :controller => "user", :action => "login" })
+
+get("/sign_out", { :controller => "user", :action => "goodbye" })
+
+   # CREATE RECORD
+   post("/insert_user", { :controller => "user", :action => "create"  })
+
+   
 
 end
