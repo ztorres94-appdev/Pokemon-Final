@@ -1,1 +1,48 @@
-<h1> Your Decklist </h1>
+<h1> <%= @current_user.username %>'s Decklist </h1>
+
+<table class="table" border="1">
+  <tr>
+    <th>
+      Card Image
+    </th>
+
+    <th>
+      Card
+    </th>
+
+    <th>
+      Card ID
+    </th>
+
+     <th>
+      Quantity
+    </th>
+
+     <th>
+    
+    </th>
+  </tr>
+
+  <% @matching_decklist.each do |a_card| %>
+  <tr>
+    <% card_id = a_card.card_id %>
+    <th>
+    <img src= <%= @all_cards.find("#{card_id}").images.small %>>
+    </th>
+    <th>
+    <%= @all_cards.find("#{card_id}").name %>
+    </th>
+    <th>
+    <%= @all_cards.find("#{card_id}").id %>
+    </th>
+    <th>
+    <%= a_card.quantity %>
+    </th>
+     <th>
+    <a href="/remove_card/<%= a_card.id %>">
+        Remove
+    </th>
+
+  </tr>
+  <% end %>
+</table>

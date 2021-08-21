@@ -72,4 +72,6 @@ get("/decklist", { :controller => "decklist", :action => "view" })
 
 post("/insert_card", { :controller => "decklist", :action => "add" })
 
+get("/remove_card/:dc_id", { :controller => "decklist", :action => "remove" })
+
 end
