@@ -4,6 +4,25 @@
 
 <img src= <%= @card.images.small %> >
 
+
+<hr>
+
+<%if @card.rules == nil %>
+   <h2> No Text </h2>
+  <% else %>
+  <h2> Text </h2>
+  <%= @card.rules.at(0) %>
+
+  <% if @card.rules.at(1) == nil %>
+    <% #Blank %>
+  <% else %>
+    <div>
+    <%= @card.rules.at(1) %>
+    </div>
+  <% end %>
+<% end %>
+
+
 <hr>
 <%if @card.abilities == nil %>
    <h2> No Ability </h2>
@@ -21,6 +40,9 @@
 <% end %>
 
 <hr>
+<%if @card.attacks == nil %>
+<h2> No Attacks </h2>
+<% else %>
 <h2> Attacks </h2>
 <table class="table" border="1">
   <tr>
@@ -57,8 +79,45 @@
 
 </tr>
 <% end %>
+
 </table>
- 
+ <% end %>
+
+<hr>
+
+<h2> Card Format Legality </h2>
+<table class="table" border="1">
+  <tr>
+    <th>
+      Standard
+    </th>
+    <th>
+     Expanded
+    </th>
+     <th>
+     Unlimited
+    </th>
+  </tr>
+  <tr>
+  <th>
+<% if @card.legalities.standard == nil %>
+      Rotated out 
+    <% else %>
+   <%= @card.legalities.standard %>
+   <% end %>
+  </th>
+
+  <th>
+   <% if @card.legalities.expanded == nil %>
+      Rotated out 
+    <% else %>
+   <%= @card.legalities.expanded %>
+   <% end %>
+  </th>
+  <th>
+    <%= @card.legalities.unlimited %>
+  </th>
+  </tr>
 
 
 

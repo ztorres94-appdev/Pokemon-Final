@@ -4,12 +4,29 @@
 <table class="table" border="1">
   <tr>
     <th>
+      Card Art
     </th>
     <th>
-      Pokemon Name
+      Card Name
     </th>
         <% #Blank %>
-  
+    <th>
+      Card ID
+    </th>
+
+    <th>
+     Type
+    </th>
+
+    <th>
+     Card Info
+    </th>
+
+    <th>
+    Add
+    </th>
+
+  </tr>
 
   <% @list_of_cards.each do |a_card| %>
   <tr>
@@ -18,6 +35,29 @@
     </th>
     <th>
     <%= a_card.name %>
+    </th>
+     <th>
+    <%= a_card.id %>
+    </th>
+    <% if a_card.types == nil %>
+          <th>
+          Energy/Trainer
+          </th>
+      <% else%>   
+          <th>
+          <%= a_card.types.first %>
+          </th>
+      <%end %>
+    <th>
+    <a href="/pokemon/<%= a_card.id %>" >
+    View card info 
+    </a>
+    </th>
+
+    <th>
+    <a href="/cards" >
+    Add card to decklist
+    </a>
     </th>
 
   </tr>

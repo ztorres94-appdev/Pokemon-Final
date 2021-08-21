@@ -4151,3 +4151,580 @@ This autoloaded constant has been unloaded.
 
 Please, check the "Autoloading and Reloading Constants" guide for solutions.
  (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+Started GET "/?vscodeBrowserReqId=1629562642898" for 10.68.8.3 at 2021-08-21 16:17:23 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Parameters: {"vscodeBrowserReqId"=>"1629562642898"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 921)
+Completed 200 OK in 2389ms (Views: 555.2ms | ActiveRecord: 0.0ms | Allocations: 375370)
+
+
+Started GET "/" for 10.68.8.3 at 2021-08-21 16:17:26 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 3716ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 10640)
+
+
+Started GET "/name?query_name=Zacian+V" for 10.68.8.3 at 2021-08-21 16:17:47 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Zacian V"}
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 401)
+Completed 200 OK in 1542ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 5529)
+
+
+Started GET "/" for 10.68.8.3 at 2021-08-21 16:17:55 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 1430ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 10645)
+
+
+Started GET "/types" for 10.68.8.3 at 2021-08-21 16:17:58 +0000
+Processing by ChooseController#type as HTML
+  Rendering choose/type.html.erb within layouts/application
+  Rendered choose/type.html.erb within layouts/application (Duration: 0.8ms | Allocations: 579)
+Completed 200 OK in 398ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 5136)
+
+
+Started GET "/types" for 10.68.8.3 at 2021-08-21 16:19:06 +0000
+Processing by ChooseController#type as HTML
+  Rendering choose/type.html.erb within layouts/application
+  Rendered choose/type.html.erb within layouts/application (Duration: 6.1ms | Allocations: 572)
+Completed 200 OK in 415ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 5457)
+
+
+Started GET "/types/Energy" for 10.68.8.3 at 2021-08-21 16:19:08 +0000
+Processing by ShowController#show_type as HTML
+  Parameters: {"type"=>"Energy"}
+  Rendering show/type_show.html.erb within layouts/application
+  Rendered show/type_show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2841)
+Completed 200 OK in 6919ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 43430)
+
+
+Started GET "/pokemon/pop5-4" for 10.68.8.3 at 2021-08-21 16:19:20 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"pop5-4"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2762)
+Completed 500 Internal Server Error in 1174ms (ActiveRecord: 0.0ms | Allocations: 6539)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/view/card_info.html.erb:41
+  app/controllers/view_controller.rb:15:in `card_info'
+
+Started POST "/__better_errors/5c68cb5bd103d078/variables" for 10.68.8.3 at 2021-08-21 16:19:22 +0000
+Started GET "/sets" for 10.68.8.3 at 2021-08-21 16:19:28 +0000
+Processing by ChooseController#sets as HTML
+  Rendering choose/sets.html.erb within layouts/application
+  Rendered choose/sets.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1436)
+Completed 200 OK in 1114ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 10411)
+
+
+Started GET "/sets/swsh5" for 10.68.8.3 at 2021-08-21 16:19:34 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"swsh5"}
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2083)
+Completed 200 OK in 5094ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 35686)
+
+
+Started GET "/pokemon/swsh5-6" for 10.68.8.3 at 2021-08-21 16:21:09 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-6"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.8ms | Allocations: 448)
+Completed 200 OK in 492ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 5684)
+
+
+Started GET "/pokemon/swsh5-159" for 10.68.8.3 at 2021-08-21 16:21:18 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-159"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 494ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 4196)
+
+
+Started GET "/pokemon/swsh5-161" for 10.68.8.3 at 2021-08-21 16:22:11 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-161"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.7ms | Allocations: 436)
+Completed 200 OK in 542ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 5608)
+
+
+Started GET "/pokemon/swsh5-161" for 10.68.8.3 at 2021-08-21 16:22:38 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-161"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 286.4ms | Allocations: 73049)
+Completed 500 Internal Server Error in 877ms (ActiveRecord: 0.0ms | Allocations: 76998)
+
+
+
+NameError - undefined local variable or method `card' for #<#<Class:0x00005559fac02818>:0x00005559fabefcb8>:
+  app/views/view/card_info.html.erb:10
+  app/controllers/view_controller.rb:15:in `card_info'
+
+Started POST "/__better_errors/aa002cbf499fed78/variables" for 10.68.8.3 at 2021-08-21 16:22:39 +0000
+Started GET "/pokemon/swsh5-161" for 10.68.8.3 at 2021-08-21 16:22:45 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-161"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 373.6ms | Allocations: 87169)
+Completed 500 Internal Server Error in 873ms (ActiveRecord: 0.0ms | Allocations: 90744)
+
+
+
+NameError - undefined local variable or method `card' for #<#<Class:0x00005559fac02818>:0x00005559fbea2ea0>:
+  app/views/view/card_info.html.erb:10
+  app/controllers/view_controller.rb:15:in `card_info'
+
+Started POST "/__better_errors/e5ca0a86961127af/variables" for 10.68.8.3 at 2021-08-21 16:22:46 +0000
+Started GET "/pokemon/swsh5-161" for 10.68.8.3 at 2021-08-21 16:23:51 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-161"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.0ms | Allocations: 462)
+Completed 200 OK in 504ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 5659)
+
+
+Started GET "/pokemon/swsh5-160" for 10.68.8.3 at 2021-08-21 16:24:07 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-160"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+Completed 200 OK in 532ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 4201)
+
+
+Started GET "/pokemon/swsh5-156" for 10.68.8.3 at 2021-08-21 16:24:10 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-156"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 29)
+Completed 200 OK in 502ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 4283)
+
+
+Started GET "/pokemon/swsh5-116" for 10.68.8.3 at 2021-08-21 16:24:21 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-116"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 30)
+Completed 200 OK in 493ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 4277)
+
+
+Started GET "/pokemon/swsh5-119" for 10.68.8.3 at 2021-08-21 16:25:03 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-119"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 28)
+Completed 200 OK in 498ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 4265)
+
+
+Started GET "/pokemon/swsh5-125" for 10.68.8.3 at 2021-08-21 16:25:08 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-125"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 482ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 4198)
+
+
+Started GET "/pokemon/swsh5-125" for 10.68.8.3 at 2021-08-21 16:26:10 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-125"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2620)
+Completed 500 Internal Server Error in 490ms (ActiveRecord: 0.0ms | Allocations: 6582)
+
+
+
+NoMethodError - undefined method `text' for #<String:0x00005559fb716b78>:
+  app/views/view/card_info.html.erb:14
+  app/controllers/view_controller.rb:15:in `card_info'
+
+Started POST "/__better_errors/4a7fd61049a97097/variables" for 10.68.8.3 at 2021-08-21 16:26:11 +0000
+Started GET "/pokemon/swsh5-125" for 10.68.8.3 at 2021-08-21 16:26:21 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-125"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.1ms | Allocations: 574)
+Completed 200 OK in 527ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 5776)
+
+
+Started GET "/pokemon/swsh5-140" for 10.68.8.3 at 2021-08-21 16:26:46 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-140"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 499ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 4201)
+
+
+Started GET "/pokemon/swsh5-141" for 10.68.8.3 at 2021-08-21 16:26:53 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh5-141"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+Completed 200 OK in 519ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 4199)
+
+
+Started GET "/sets/base1" for 10.68.8.3 at 2021-08-21 16:27:07 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"base1"}
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1282)
+Completed 200 OK in 2720ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 20308)
+
+
+Started GET "/pokemon/base1-98" for 10.68.8.3 at 2021-08-21 16:27:15 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"base1-98"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 703ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 4182)
+
+
+Started GET "/sets/hgss3" for 10.68.8.3 at 2021-08-21 16:27:29 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"hgss3"}
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 1.0ms | Allocations: 886)
+Completed 200 OK in 2724ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 19563)
+
+
+Started GET "/sets/hgss3" for 10.68.8.3 at 2021-08-21 16:27:32 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"hgss3"}
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 0.9ms | Allocations: 886)
+Completed 200 OK in 2754ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 19622)
+
+
+Started GET "/pokemon/hgss3-79" for 10.68.8.3 at 2021-08-21 16:27:51 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-79"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 523ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 4186)
+
+
+Started GET "/pokemon/hgss3-84" for 10.68.8.3 at 2021-08-21 16:28:14 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-84"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.8ms | Allocations: 578)
+Completed 200 OK in 499ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 5802)
+
+
+Started GET "/pokemon/hgss3-87" for 10.68.8.3 at 2021-08-21 16:28:30 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-87"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 34)
+Completed 200 OK in 497ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 4284)
+
+
+Started GET "/pokemon/hgss3-87" for 10.68.8.3 at 2021-08-21 16:29:23 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-87"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.2ms | Allocations: 609)
+Completed 200 OK in 489ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 5838)
+
+
+Started GET "/pokemon/hgss3-87" for 10.68.8.3 at 2021-08-21 16:29:30 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-87"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2659)
+Completed 500 Internal Server Error in 504ms (ActiveRecord: 0.0ms | Allocations: 6667)
+
+
+
+NoMethodError - undefined method `text' for #<Pokemon::Legalities:0x00005559fbddbc38>:
+  app/views/view/card_info.html.erb:87
+  app/controllers/view_controller.rb:15:in `card_info'
+
+Started POST "/__better_errors/cc10a89e03a89e6f/variables" for 10.68.8.3 at 2021-08-21 16:29:31 +0000
+Started GET "/pokemon/hgss3-87" for 10.68.8.3 at 2021-08-21 16:29:39 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-87"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2664)
+Completed 500 Internal Server Error in 535ms (ActiveRecord: 0.0ms | Allocations: 6671)
+
+
+
+NoMethodError - undefined method `at' for #<Pokemon::Legalities:0x00005559fad26758>:
+  app/views/view/card_info.html.erb:87
+  app/controllers/view_controller.rb:15:in `card_info'
+
+Started POST "/__better_errors/9bc971e10e85912b/variables" for 10.68.8.3 at 2021-08-21 16:29:40 +0000
+Started GET "/pokemon/hgss3-87" for 10.68.8.3 at 2021-08-21 16:29:45 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-87"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2088)
+Completed 500 Internal Server Error in 492ms (ActiveRecord: 0.0ms | Allocations: 5268)
+
+
+
+NoMethodError - undefined method `at' for #<Pokemon::Legalities:0x00005559fa2183e8>:
+  app/views/view/card_info.html.erb:87
+  app/controllers/view_controller.rb:15:in `card_info'
+
+Started POST "/__better_errors/7c70aafa416df569/variables" for 10.68.8.3 at 2021-08-21 16:29:46 +0000
+Started GET "/pokemon/hgss3-87" for 10.68.8.3 at 2021-08-21 16:29:47 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-87"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.9ms | Allocations: 612)
+Completed 200 OK in 495ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 5847)
+
+
+Started GET "/pokemon/hgss3-87" for 10.68.8.3 at 2021-08-21 16:31:16 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-87"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.1ms | Allocations: 604)
+Completed 200 OK in 491ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 5865)
+
+
+Started GET "/pokemon/hgss3-87" for 10.68.8.3 at 2021-08-21 16:31:26 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-87"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.2ms | Allocations: 34)
+Completed 200 OK in 522ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 4713)
+
+
+Started GET "/pokemon/hgss3-87" for 10.68.8.3 at 2021-08-21 16:31:27 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-87"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.9ms | Allocations: 604)
+Completed 200 OK in 505ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 5829)
+
+
+Started GET "/sets/swsh2" for 10.68.8.3 at 2021-08-21 16:31:36 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"swsh2"}
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2348)
+Completed 200 OK in 5728ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 41126)
+
+
+Started GET "/pokemon/swsh2-1" for 10.68.8.3 at 2021-08-21 16:31:43 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh2-1"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 478ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 4258)
+
+
+Started GET "/pokemon/swsh2-1" for 10.68.8.3 at 2021-08-21 16:34:28 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh2-1"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 130.3ms | Allocations: 73642)
+Completed 500 Internal Server Error in 698ms (ActiveRecord: 0.0ms | Allocations: 77646)
+
+
+
+NameError - undefined local variable or method `attack' for #<#<Class:0x00005559fbbe0de8>:0x00005559fbbe7530>:
+  app/views/view/card_info.html.erb:103
+  app/controllers/view_controller.rb:15:in `card_info'
+
+Started POST "/__better_errors/4ee1085d44329bd9/variables" for 10.68.8.3 at 2021-08-21 16:34:29 +0000
+Started GET "/pokemon/swsh2-1" for 10.68.8.3 at 2021-08-21 16:34:46 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh2-1"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2794)
+Completed 500 Internal Server Error in 525ms (ActiveRecord: 0.0ms | Allocations: 6803)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+  </th>
+  ^
+/workspace/Pokemon-Final/app/views/view/card_info.html.erb:108: unknown regexp options - th
+/workspace/Pokemon-Final/app/views/view/card_info.html.erb:109: syntax error, unexpected '<'
+  <th>
+  ^
+/workspace/Pokemon-Final/app/views/view/card_info.html.erb:119: syntax error, unexpected end, expecting ')'
+          end
+          ^~~:
+  app/views/view/card_info.html.erb:104:in `'
+  app/controllers/view_controller.rb:15:in `card_info'
+
+Started POST "/__better_errors/a81545afeef6eff0/variables" for 10.68.8.3 at 2021-08-21 16:34:47 +0000
+Started GET "/pokemon/swsh2-1" for 10.68.8.3 at 2021-08-21 16:35:02 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh2-1"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.2ms | Allocations: 668)
+Completed 200 OK in 504ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 5908)
+
+
+Started GET "/pokemon/swsh2-1" for 10.68.8.3 at 2021-08-21 16:35:22 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"swsh2-1"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.3ms | Allocations: 667)
+Completed 200 OK in 506ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 5908)
+
+
+Started GET "/" for 10.68.8.3 at 2021-08-21 16:35:25 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 787)
+Completed 200 OK in 1313ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 11584)
+
+
+Started GET "/name?query_name=Reset+Stamp" for 10.68.8.3 at 2021-08-21 16:35:30 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Reset Stamp"}
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.6ms | Allocations: 353)
+Completed 200 OK in 549ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 4938)
+
+
+Started GET "/pokemon/sm11-206" for 10.68.8.3 at 2021-08-21 16:35:32 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"sm11-206"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 518ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 4216)
+
+
+Started GET "/types" for 10.68.8.3 at 2021-08-21 16:35:46 +0000
+Processing by ChooseController#type as HTML
+  Rendering choose/type.html.erb within layouts/application
+  Rendered choose/type.html.erb within layouts/application (Duration: 1.0ms | Allocations: 572)
+Completed 200 OK in 381ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 5133)
+
+
+Started GET "/sets" for 10.68.8.3 at 2021-08-21 16:35:50 +0000
+Processing by ChooseController#sets as HTML
+  Rendering choose/sets.html.erb within layouts/application
+  Rendered choose/sets.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1424)
+Completed 200 OK in 1096ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 10405)
+
+
+Started GET "/sets/bw11" for 10.68.8.3 at 2021-08-21 16:35:55 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"bw11"}
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1717)
+Completed 200 OK in 3940ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 28959)
+
+
+Started GET "/pokemon/bw11-1" for 10.68.8.3 at 2021-08-21 16:36:01 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"bw11-1"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 34)
+Completed 200 OK in 489ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 4292)
+
+
+Started GET "/sets/base1" for 10.68.8.3 at 2021-08-21 16:36:19 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"base1"}
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 0.8ms | Allocations: 957)
+Completed 200 OK in 2747ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 19382)
+
+
+Started GET "/pokemon/base1-1" for 10.68.8.3 at 2021-08-21 16:36:24 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"base1-1"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 513ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 4251)
+
+
+Started GET "/pokemon/base1-1" for 10.68.8.3 at 2021-08-21 16:37:52 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"base1-1"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.8ms | Allocations: 701)
+Completed 200 OK in 500ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 6367)
+
+
+Started GET "/pokemon/base1-1" for 10.68.8.3 at 2021-08-21 16:38:14 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"base1-1"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.0ms | Allocations: 749)
+Completed 200 OK in 505ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 5973)
+
+
+Started GET "/" for 10.68.8.3 at 2021-08-21 16:38:18 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 787)
+Completed 200 OK in 1305ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 11569)
+
+
+Started GET "/types" for 10.68.8.3 at 2021-08-21 16:38:21 +0000
+Processing by ChooseController#type as HTML
+  Rendering choose/type.html.erb within layouts/application
+  Rendered choose/type.html.erb within layouts/application (Duration: 0.7ms | Allocations: 572)
+Completed 200 OK in 383ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 5112)
+
+
+Started GET "/sets" for 10.68.8.3 at 2021-08-21 16:38:24 +0000
+Processing by ChooseController#sets as HTML
+  Rendering choose/sets.html.erb within layouts/application
+  Rendered choose/sets.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1424)
+Completed 200 OK in 1444ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 10429)
+
+
+Started GET "/sets/hgss4" for 10.68.8.3 at 2021-08-21 16:38:31 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"hgss4"}
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1341)
+Completed 200 OK in 3164ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 22793)
+
+
+Started GET "/pokemon/hgss4-97" for 10.68.8.3 at 2021-08-21 16:38:46 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss4-97"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 519ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 4230)
+
+
+Started GET "/pokemon/hgss4-99" for 10.68.8.3 at 2021-08-21 16:38:49 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss4-99"}
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 31)
+Completed 200 OK in 573ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 4282)
+
+
+Started GET "/" for 10.68.8.3 at 2021-08-21 16:39:04 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 1273ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 10662)
+
+
