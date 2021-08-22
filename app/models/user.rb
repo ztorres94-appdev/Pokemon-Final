@@ -15,6 +15,6 @@ class User < ApplicationRecord
   has_secure_password
 
 
-has_many(:decklists, { :class_name => "Decklist", :foreign_key => "user_id", :dependent => :destroy })
+#has_many(:decklists, { :class_name => "Decklist", :foreign_key => "user_id", :dependent => :destroy })
   
 end

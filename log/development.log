@@ -7762,3 +7762,782 @@ This autoloaded constant has been unloaded.
 
 Please, check the "Autoloading and Reloading Constants" guide for solutions.
  (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+Started GET "/?vscodeBrowserReqId=1629604175665" for 10.68.8.4 at 2021-08-22 03:49:35 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Parameters: {"vscodeBrowserReqId"=>"1629604175665"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 921)
+Completed 200 OK in 1827ms (Views: 525.4ms | ActiveRecord: 0.7ms | Allocations: 382803)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:49:38 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1350ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 11437)
+
+
+Started GET "/sign_out" for 10.68.8.4 at 2021-08-22 03:49:41 +0000
+Processing by UserAuthenticationController#goodbye as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1084)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:49:41 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1270ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 11451)
+
+
+Started GET "/sign_up" for 10.68.8.4 at 2021-08-22 03:49:45 +0000
+Processing by UserAuthenticationController#sign_up as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/create.html.erb within layouts/application
+  Rendered user/create.html.erb within layouts/application (Duration: 0.4ms | Allocations: 117)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 2833)
+
+
+Started POST "/insert_user" for 10.68.8.4 at 2021-08-22 03:50:45 +0000
+Processing by UserAuthenticationController#create as HTML
+  Parameters: {"query_email"=>"ztorres1215@live.com", "query_user_name"=>"Red1998", "query_password"=>"[FILTERED]", "query_password_confirmation"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ztorres1215@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 462ms (ActiveRecord: 0.8ms | Allocations: 205454)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:50:46 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 1262ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 11448)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:50:54 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 1736ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 11407)
+
+
+Started GET "/sign_in" for 10.68.8.4 at 2021-08-22 03:50:57 +0000
+Processing by UserAuthenticationController#login as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (Duration: 0.3ms | Allocations: 103)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 2310)
+
+
+Started POST "/user_verify_credentials" for 10.68.8.4 at 2021-08-22 03:51:03 +0000
+Processing by UserAuthenticationController#create_cookie as HTML
+  Parameters: {"query_email"=>"ztorres1215@live.com", "query_password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ztorres1215@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:43:in `create_cookie'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/user_sign_in
+Completed 302 Found in 221ms (ActiveRecord: 0.4ms | Allocations: 1843)
+
+
+Started GET "/user_sign_in" for 10.68.8.4 at 2021-08-22 03:51:03 +0000
+
+AbstractController::ActionNotFound - The action 'sign_in_form' could not be found for UserAuthenticationController:
+
+Started POST "/__better_errors/47c6e7568c4e1b53/variables" for 10.68.8.4 at 2021-08-22 03:51:03 +0000
+Started GET "/rails/db" for 10.68.8.4 at 2021-08-22 03:51:21 +0000
+Processing by RailsDb::DashboardController#index as HTML
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application (Duration: 1.7ms | Allocations: 901)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 3.3ms | Allocations: 2086)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 1.0ms | Allocations: 444)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.7ms | Allocations: 453)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 2.3ms | Allocations: 1715)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.2ms | Allocations: 16398)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:51:22 +0000
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.3ms | Allocations: 141)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 8.9ms | Allocations: 9246)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 5.5ms | Allocations: 7170)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.3ms | Allocations: 1160)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 42.5ms | Allocations: 34400)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb (Duration: 44.0ms | Allocations: 35922)
+Completed 200 OK in 73ms (Views: 44.4ms | ActiveRecord: 2.0ms | Allocations: 40467)
+
+
+Started GET "/sign_up" for 10.68.8.4 at 2021-08-22 03:51:34 +0000
+Processing by UserAuthenticationController#sign_up as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/create.html.erb within layouts/application
+  Rendered user/create.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 2067)
+
+
+Started POST "/insert_user" for 10.68.8.4 at 2021-08-22 03:51:48 +0000
+Processing by UserAuthenticationController#create as HTML
+  Parameters: {"query_email"=>"ztorres@chicagobooth.edu", "query_user_name"=>"Red1998", "query_password"=>"[FILTERED]", "query_password_confirmation"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ztorres@chicagobooth.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 239ms (ActiveRecord: 0.5ms | Allocations: 5080)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:51:48 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 496)
+Completed 200 OK in 1314ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 11436)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:51:51 +0000
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 8.6ms | Allocations: 7323)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 7.3ms | Allocations: 7166)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.6ms | Allocations: 892)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 53.5ms | Allocations: 30218)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 54.4ms | Allocations: 30545)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.5ms | Allocations: 1192)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.6ms | Allocations: 216)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 0.9ms | Allocations: 648)
+Completed 200 OK in 96ms (Views: 65.5ms | ActiveRecord: 3.0ms | Allocations: 44537)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:51:53 +0000
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.5ms | Allocations: 7322)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 7.2ms | Allocations: 7166)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.9ms | Allocations: 888)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 44.1ms | Allocations: 29367)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 44.3ms | Allocations: 29434)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.5ms | Allocations: 1190)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.7ms | Allocations: 215)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.1ms | Allocations: 173)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 0.7ms | Allocations: 648)
+Completed 200 OK in 86ms (Views: 53.5ms | ActiveRecord: 3.0ms | Allocations: 42834)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:52:01 +0000
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.9ms | Allocations: 7322)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.3ms | Allocations: 7166)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.9ms | Allocations: 888)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 41.2ms | Allocations: 29367)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 41.5ms | Allocations: 29434)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.1ms | Allocations: 1190)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.4ms | Allocations: 215)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.1ms | Allocations: 173)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 0.7ms | Allocations: 648)
+Completed 200 OK in 81ms (Views: 49.5ms | ActiveRecord: 2.4ms | Allocations: 42829)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:52:02 +0000
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 7.7ms | Allocations: 7322)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.5ms | Allocations: 7166)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.1ms | Allocations: 888)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 41.8ms | Allocations: 29367)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb (Duration: 42.9ms | Allocations: 30489)
+Completed 200 OK in 68ms (Views: 41.5ms | ActiveRecord: 2.3ms | Allocations: 33148)
+
+
+Started GET "/rails/db/tables/decklists/data" for 10.68.8.4 at 2021-08-22 03:52:03 +0000
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"decklists"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "decklists"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 8.0ms | Allocations: 7671)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 35.5ms | Allocations: 7159)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.1ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.2ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.4ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.1ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.9ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 85.3ms | Allocations: 34452)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb (Duration: 86.3ms | Allocations: 35886)
+Completed 200 OK in 118ms (Views: 79.2ms | ActiveRecord: 8.6ms | Allocations: 38742)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:52:04 +0000
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.6ms | Allocations: 7327)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 7.4ms | Allocations: 7166)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.8ms | Allocations: 888)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 41.9ms | Allocations: 29372)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb (Duration: 43.0ms | Allocations: 30493)
+Completed 200 OK in 74ms (Views: 41.7ms | ActiveRecord: 2.3ms | Allocations: 33163)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:53:20 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1317ms (Views: 3.8ms | ActiveRecord: 0.9ms | Allocations: 13166)
+
+
+Started GET "/sign_in" for 10.68.8.4 at 2021-08-22 03:53:23 +0000
+Processing by UserAuthenticationController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2222)
+
+
+Started POST "/user_verify_credentials" for 10.68.8.4 at 2021-08-22 03:53:28 +0000
+Processing by UserAuthenticationController#create_cookie as HTML
+  Parameters: {"query_email"=>"ztorres1215@live.com", "query_password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ztorres1215@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:43:in `create_cookie'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 252ms (ActiveRecord: 0.4ms | Allocations: 5415)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:53:28 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1325ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 11466)
+
+
+Started GET "/decklist" for 10.68.8.4 at 2021-08-22 03:53:34 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[36mDecklist Load (0.2ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/decklist/view.html.erb:26
+  Rendered decklist/view.html.erb within layouts/application (Duration: 3180.9ms | Allocations: 26347)
+Completed 200 OK in 3188ms (Views: 3183.6ms | ActiveRecord: 0.8ms | Allocations: 29721)
+
+
+Started GET "/sign_out" for 10.68.8.4 at 2021-08-22 03:53:40 +0000
+Processing by UserAuthenticationController#goodbye as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1049)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:53:40 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1403ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 11454)
+
+
+Started GET "/sign_up" for 10.68.8.4 at 2021-08-22 03:53:49 +0000
+Processing by UserAuthenticationController#sign_up as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/create.html.erb within layouts/application
+  Rendered user/create.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 2084)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:53:54 +0000
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 10.4ms | Allocations: 7263)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 10.0ms | Allocations: 7168)
+  [1m[36m Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 3.1ms | Allocations: 894)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 68.9ms | Allocations: 29561)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 69.6ms | Allocations: 29628)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.9ms | Allocations: 1196)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.8ms | Allocations: 216)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 1.0ms | Allocations: 648)
+Completed 200 OK in 116ms (Views: 81.9ms | ActiveRecord: 3.8ms | Allocations: 43243)
+
+
+Started POST "/insert_user" for 10.68.8.4 at 2021-08-22 03:54:12 +0000
+Processing by UserAuthenticationController#create as HTML
+  Parameters: {"query_email"=>"ztorres@chicagobooth.edu", "query_user_name"=>"Test1998", "query_password"=>"[FILTERED]", "query_password_confirmation"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ztorres@chicagobooth.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "ztorres@chicagobooth.edu"], ["password_digest", "$2a$12$5hGeAJzLs3ZATIWfy7.2AOm49lYyH6CUOpbLmioY0pSWOI/gmGESi"], ["username", "Test1998"], ["created_at", "2021-08-22 03:54:13.114702"], ["updated_at", "2021-08-22 03:54:13.114702"]]
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[35m (37.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 273ms (ActiveRecord: 38.4ms | Allocations: 5666)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:54:13 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1269ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 11435)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:54:17 +0000
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 5.9ms | Allocations: 7322)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.2ms | Allocations: 7166)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 4.8ms | Allocations: 890)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.4ms | Allocations: 889)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 83.3ms | Allocations: 30482)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 83.5ms | Allocations: 30549)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.2ms | Allocations: 1190)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.5ms | Allocations: 215)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 0.8ms | Allocations: 648)
+Completed 200 OK in 124ms (Views: 88.5ms | ActiveRecord: 6.2ms | Allocations: 43950)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:54:21 +0000
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.5ms | Allocations: 7327)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 5.6ms | Allocations: 7168)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.4ms | Allocations: 888)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.3ms | Allocations: 889)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 42.5ms | Allocations: 30521)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 42.7ms | Allocations: 30588)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.4ms | Allocations: 1190)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.7ms | Allocations: 215)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 0.9ms | Allocations: 648)
+Completed 200 OK in 82ms (Views: 51.6ms | ActiveRecord: 4.3ms | Allocations: 43994)
+
+
+Started GET "/sign_in" for 10.68.8.4 at 2021-08-22 03:54:23 +0000
+Processing by UserAuthenticationController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2077)
+
+
+Started POST "/user_verify_credentials" for 10.68.8.4 at 2021-08-22 03:54:29 +0000
+Processing by UserAuthenticationController#create_cookie as HTML
+  Parameters: {"query_email"=>"ztorres@chicagobooth.edu", "query_password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ztorres@chicagobooth.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:43:in `create_cookie'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 241ms (ActiveRecord: 0.3ms | Allocations: 1825)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:54:29 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 496)
+Completed 200 OK in 1351ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 11437)
+
+
+Started GET "/decklist" for 10.68.8.4 at 2021-08-22 03:54:32 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/decklist/view.html.erb:26
+  Rendered decklist/view.html.erb within layouts/application (Duration: 1.3ms | Allocations: 649)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2817)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:54:34 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1378ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 11459)
+
+
+Started GET "/sets" for 10.68.8.4 at 2021-08-22 03:54:37 +0000
+Processing by ChooseController#sets as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering choose/sets.html.erb within layouts/application
+  Rendered choose/sets.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1436)
+Completed 200 OK in 1126ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 11746)
+
+
+Started GET "/sets/base2" for 10.68.8.4 at 2021-08-22 03:54:40 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"base2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 1.1ms | Allocations: 970)
+Completed 200 OK in 2114ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 17275)
+
+
+Started GET "/pokemon/base2-1" for 10.68.8.4 at 2021-08-22 03:54:43 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"base2-1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.3ms | Allocations: 889)
+Completed 200 OK in 487ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 6608)
+
+
+Started POST "/insert_card" for 10.68.8.4 at 2021-08-22 03:54:46 +0000
+Processing by DecklistController#add as HTML
+  Parameters: {"query_card_id"=>"base2-1", "query_quantity"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/decklist_controller.rb:24:in `add'
+  [1m[36mDecklist Create (0.3ms)[0m  [1m[32mINSERT INTO "decklists" ("user_id", "created_at", "updated_at", "quantity", "card_id") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["created_at", "2021-08-22 03:54:46.846355"], ["updated_at", "2021-08-22 03:54:46.846355"], ["quantity", 4], ["card_id", "base2-1"]]
+  ↳ app/controllers/decklist_controller.rb:24:in `add'
+  [1m[35m (39.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/decklist_controller.rb:24:in `add'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/decklist
+Completed 302 Found in 48ms (ActiveRecord: 39.8ms | Allocations: 4255)
+
+
+Started GET "/decklist" for 10.68.8.4 at 2021-08-22 03:54:46 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/decklist/view.html.erb:26
+  Rendered decklist/view.html.erb within layouts/application (Duration: 610.9ms | Allocations: 5107)
+Completed 200 OK in 615ms (Views: 613.3ms | ActiveRecord: 0.3ms | Allocations: 7283)
+
+
+Started GET "/sign_out" for 10.68.8.4 at 2021-08-22 03:54:50 +0000
+Processing by UserAuthenticationController#goodbye as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1073)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:54:50 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 496)
+Completed 200 OK in 1286ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 11413)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:54:51 +0000
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 7.1ms | Allocations: 7322)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.5ms | Allocations: 7166)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.8ms | Allocations: 892)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.6ms | Allocations: 889)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 42.6ms | Allocations: 30514)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb (Duration: 43.7ms | Allocations: 31718)
+Completed 200 OK in 73ms (Views: 41.5ms | ActiveRecord: 3.3ms | Allocations: 34375)
+
+
+Started GET "/rails/db/tables/decklists/data" for 10.68.8.4 at 2021-08-22 03:54:52 +0000
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"decklists"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "decklists"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 7.1ms | Allocations: 7317)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 5.7ms | Allocations: 7158)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.2ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.0ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.0ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.0ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.9ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.9ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 57.3ms | Allocations: 34931)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb (Duration: 58.8ms | Allocations: 36444)
+Completed 200 OK in 85ms (Views: 51.5ms | ActiveRecord: 8.3ms | Allocations: 39087)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:54:55 +0000
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 5.7ms | Allocations: 7322)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 5.3ms | Allocations: 7166)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.1ms | Allocations: 888)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.0ms | Allocations: 889)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 72.9ms | Allocations: 30515)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.js.erb (Duration: 74.1ms | Allocations: 31718)
+Completed 200 OK in 102ms (Views: 71.5ms | ActiveRecord: 3.6ms | Allocations: 34375)
+
+
+Started GET "/sign_up" for 10.68.8.4 at 2021-08-22 03:55:29 +0000
+Processing by UserAuthenticationController#sign_up as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/create.html.erb within layouts/application
+  Rendered user/create.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2094)
+
+
+Started POST "/insert_user" for 10.68.8.4 at 2021-08-22 03:56:16 +0000
+Processing by UserAuthenticationController#create as HTML
+  Parameters: {"query_email"=>"poko09polo@gmail.com", "query_user_name"=>"Steelix2011", "query_password"=>"[FILTERED]", "query_password_confirmation"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "poko09polo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "poko09polo@gmail.com"], ["password_digest", "$2a$12$d6kTQACPKsSkKPNQ8uzNvu3ZdSoZnDZt3qR2jajSSYcDncQa.k8Ce"], ["username", "Steelix2011"], ["created_at", "2021-08-22 03:56:16.478128"], ["updated_at", "2021-08-22 03:56:16.478128"]]
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[35m (843.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 1114ms (ActiveRecord: 844.0ms | Allocations: 5460)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:56:17 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 496)
+Completed 200 OK in 1382ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 11441)
+
+
+Started GET "/rails/db/tables/users/data" for 10.68.8.4 at 2021-08-22 03:56:21 +0000
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 10.7ms | Allocations: 7327)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 11.1ms | Allocations: 7168)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.6ms | Allocations: 888)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.1ms | Allocations: 889)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.5ms | Allocations: 888)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 74.1ms | Allocations: 31594)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 75.0ms | Allocations: 31661)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.8ms | Allocations: 1192)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.8ms | Allocations: 216)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 1.2ms | Allocations: 648)
+Completed 200 OK in 166ms (Views: 85.8ms | ActiveRecord: 6.2ms | Allocations: 45083)
+
+
+Started GET "/sign_in" for 10.68.8.4 at 2021-08-22 03:56:23 +0000
+Processing by UserAuthenticationController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 2075)
+
+
+Started POST "/user_verify_credentials" for 10.68.8.4 at 2021-08-22 03:56:28 +0000
+Processing by UserAuthenticationController#create_cookie as HTML
+  Parameters: {"query_email"=>"poko09polo@gmail.com", "query_password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "poko09polo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:43:in `create_cookie'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 266ms (ActiveRecord: 0.4ms | Allocations: 1833)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:56:28 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1320ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 11449)
+
+
+Started GET "/name?query_name=steelix" for 10.68.8.4 at 2021-08-22 03:56:36 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"steelix"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 1.1ms | Allocations: 606)
+Completed 200 OK in 1242ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 10599)
+
+
+Started GET "/pokemon/hgss2-87" for 10.68.8.4 at 2021-08-22 03:56:44 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss2-87"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+Completed 200 OK in 478ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 5099)
+
+
+Started POST "/insert_card" for 10.68.8.4 at 2021-08-22 03:56:51 +0000
+Processing by DecklistController#add as HTML
+  Parameters: {"query_card_id"=>"hgss2-87", "query_quantity"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/decklist_controller.rb:24:in `add'
+  [1m[36mDecklist Create (0.4ms)[0m  [1m[32mINSERT INTO "decklists" ("user_id", "created_at", "updated_at", "quantity", "card_id") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["created_at", "2021-08-22 03:56:51.571966"], ["updated_at", "2021-08-22 03:56:51.571966"], ["quantity", 4], ["card_id", "hgss2-87"]]
+  ↳ app/controllers/decklist_controller.rb:24:in `add'
+  [1m[35m (223.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/decklist_controller.rb:24:in `add'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/decklist
+Completed 302 Found in 237ms (ActiveRecord: 224.3ms | Allocations: 4313)
+
+
+Started GET "/decklist" for 10.68.8.4 at 2021-08-22 03:56:51 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[36mDecklist Load (0.2ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:26
+  Rendered decklist/view.html.erb within layouts/application (Duration: 673.7ms | Allocations: 5315)
+Completed 200 OK in 682ms (Views: 677.5ms | ActiveRecord: 0.3ms | Allocations: 7498)
+
+
+Started GET "/sign_out" for 10.68.8.4 at 2021-08-22 03:56:56 +0000
+Processing by UserAuthenticationController#goodbye as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 1059)
+
+
+Started GET "/" for 10.68.8.4 at 2021-08-22 03:56:56 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 496)
+Completed 200 OK in 1268ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 11430)
+
+
