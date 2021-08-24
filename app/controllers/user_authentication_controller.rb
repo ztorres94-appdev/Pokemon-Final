@@ -26,9 +26,16 @@ class UserAuthenticationController < ApplicationController
     @user.username = params.fetch("query_user_name")
    
 
-    save_status = @user.save
-
+    save_status = @user.save    
+    
+    if save_status == true
+ 
+ 
     redirect_to("/", { :notice => "Account created successfully! Please login to your account!"})
+  else
+    redirect_to("/sign_up", { :alert => "Email or username already exists"})
+  end
+
 
   end
 
