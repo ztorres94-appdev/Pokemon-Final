@@ -1,4 +1,6 @@
 <h1> <%= @current_user.username %>'s Decklist </h1>
+<h2> Number of Cards in Deck = <%= @matching_decklist.sum( :quantity) %> </h2>
+<hr>
 
 <table class="table" border="1">
   <tr>

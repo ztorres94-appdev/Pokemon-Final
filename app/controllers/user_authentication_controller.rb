@@ -28,7 +28,7 @@ class UserAuthenticationController < ApplicationController
 
     save_status = @user.save
 
-    redirect_to("/", { :notice => "Account created successfully!"})
+    redirect_to("/", { :notice => "Account created successfully! Please login to your account!"})
 
   end
 
@@ -48,14 +48,14 @@ class UserAuthenticationController < ApplicationController
       are_they_legit = user.authenticate(the_supplied_password)
     
       if are_they_legit == false
-        redirect_to("/user_sign_in", { :alert => "Incorrect password." })
+        redirect_to("/sign_in", { :alert => "Incorrect password." })
       else
         session[:user_id] = user.id
       
         redirect_to("/", { :notice => "Signed in successfully." })
       end
     else
-      redirect_to("/user_sign_in", { :alert => "No user with that email address." })
+      redirect_to("/sign_in", { :alert => "No user with that email address." })
     end
 
 

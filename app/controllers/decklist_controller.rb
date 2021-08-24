@@ -2,6 +2,12 @@ class DecklistController < ApplicationController
 
 def view
 
+if session.fetch( :user_id) == nil
+
+  redirect_to("/", { :alert => "Must be logged in to access decklists" })
+
+else
+
 the_id = session.fetch( :user_id)
  @decklist = Decklist.all 
 
@@ -12,6 +18,7 @@ the_id = session.fetch( :user_id)
   render({ :template => "decklist/view.html.erb" })
 
 end
+end 
 
 
 
