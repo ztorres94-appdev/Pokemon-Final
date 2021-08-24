@@ -8989,3 +8989,898 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 1321ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 11435)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constant RailsDb::RailsDbDataTableHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload RailsDb::RailsDbDataTableHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /workspace/Pokemon-Final/config/environment.rb:5)
+Started GET "/?vscodeBrowserReqId=1629774359660" for 10.68.7.4 at 2021-08-24 03:05:59 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Parameters: {"vscodeBrowserReqId"=>"1629774359660"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 921)
+Completed 200 OK in 1764ms (Views: 418.7ms | ActiveRecord: 0.7ms | Allocations: 378089)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:06:01 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1309ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 11395)
+
+
+Started GET "/sign_up" for 10.68.7.4 at 2021-08-24 03:06:16 +0000
+Processing by UserAuthenticationController#sign_up as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/create.html.erb within layouts/application
+  Rendered user/create.html.erb within layouts/application (Duration: 0.4ms | Allocations: 117)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 2832)
+
+
+Started POST "/insert_user" for 10.68.7.4 at 2021-08-24 03:06:23 +0000
+Processing by UserAuthenticationController#create as HTML
+  Parameters: {"query_email"=>"ztorres@chicagobooth.edu", "query_user_name"=>"Antilles1215", "query_password"=>"[FILTERED]", "query_password_confirmation"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ztorres@chicagobooth.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/sign_up
+Completed 302 Found in 399ms (ActiveRecord: 0.6ms | Allocations: 208722)
+
+
+Started GET "/sign_up" for 10.68.7.4 at 2021-08-24 03:06:23 +0000
+Processing by UserAuthenticationController#sign_up as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/create.html.erb within layouts/application
+  Rendered user/create.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 2092)
+
+
+Started GET "/sign_in" for 10.68.7.4 at 2021-08-24 03:06:34 +0000
+Processing by UserAuthenticationController#login as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (Duration: 0.4ms | Allocations: 103)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 2292)
+
+
+Started POST "/user_verify_credentials" for 10.68.7.4 at 2021-08-24 03:06:38 +0000
+Processing by UserAuthenticationController#create_cookie as HTML
+  Parameters: {"query_email"=>"ztorres@chicagobooth.edu", "query_password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ztorres@chicagobooth.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:50:in `create_cookie'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/sign_in
+Completed 302 Found in 220ms (ActiveRecord: 0.3ms | Allocations: 1843)
+
+
+Started GET "/sign_in" for 10.68.7.4 at 2021-08-24 03:06:38 +0000
+Processing by UserAuthenticationController#login as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 2094)
+
+
+Started POST "/user_verify_credentials" for 10.68.7.4 at 2021-08-24 03:07:07 +0000
+Processing by UserAuthenticationController#create_cookie as HTML
+  Parameters: {"query_email"=>"poko09polo@gmail.com", "query_password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "poko09polo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:50:in `create_cookie'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 221ms (ActiveRecord: 0.2ms | Allocations: 1817)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:07:07 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1295ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 11476)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:07:17 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.2ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 659.8ms | Allocations: 9974)
+Completed 200 OK in 666ms (Views: 662.6ms | ActiveRecord: 0.9ms | Allocations: 13337)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:08:13 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 638.2ms | Allocations: 5784)
+Completed 200 OK in 643ms (Views: 640.2ms | ActiveRecord: 0.3ms | Allocations: 7944)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:08:18 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 1307ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 11422)
+
+
+Started GET "/name?query_name=Umbreon" for 10.68.7.4 at 2021-08-24 03:08:25 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Umbreon"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.8ms | Allocations: 623)
+Completed 200 OK in 1406ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 10675)
+
+
+Started GET "/pokemon/hgss3-10" for 10.68.7.4 at 2021-08-24 03:08:36 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.0ms | Allocations: 888)
+Completed 200 OK in 562ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 6576)
+
+
+Started POST "/insert_card" for 10.68.7.4 at 2021-08-24 03:08:49 +0000
+Processing by DecklistController#add as HTML
+  Parameters: {"query_card_id"=>"hgss3-10", "query_quantity"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[36mDecklist Create (0.3ms)[0m  [1m[32mINSERT INTO "decklists" ("user_id", "created_at", "updated_at", "quantity", "card_id") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["created_at", "2021-08-24 03:08:49.031554"], ["updated_at", "2021-08-24 03:08:49.031554"], ["quantity", 3], ["card_id", "hgss3-10"]]
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[35m (43.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/decklist
+Completed 302 Found in 52ms (ActiveRecord: 44.3ms | Allocations: 4332)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:08:49 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 1480.9ms | Allocations: 10233)
+Completed 200 OK in 1486ms (Views: 1483.4ms | ActiveRecord: 0.3ms | Allocations: 12414)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:09:00 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 496)
+Completed 200 OK in 1373ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 11431)
+
+
+Started GET "/name?query_name=Metal" for 10.68.7.4 at 2021-08-24 03:09:18 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Metal"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.3ms | Allocations: 300)
+Completed 200 OK in 1209ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 9270)
+
+
+Started GET "/pokemon/hgss3-80" for 10.68.7.4 at 2021-08-24 03:09:26 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-80"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 735ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 4996)
+
+
+Started POST "/insert_card" for 10.68.7.4 at 2021-08-24 03:09:36 +0000
+Processing by DecklistController#add as HTML
+  Parameters: {"query_card_id"=>"hgss3-80", "query_quantity"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[36mDecklist Create (0.3ms)[0m  [1m[32mINSERT INTO "decklists" ("user_id", "created_at", "updated_at", "quantity", "card_id") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["created_at", "2021-08-24 03:09:36.154221"], ["updated_at", "2021-08-24 03:09:36.154221"], ["quantity", 4], ["card_id", "hgss3-80"]]
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[35m (31.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/decklist
+Completed 302 Found in 40ms (ActiveRecord: 31.8ms | Allocations: 4241)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:09:36 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 1918.3ms | Allocations: 14515)
+Completed 200 OK in 1923ms (Views: 1920.7ms | ActiveRecord: 0.3ms | Allocations: 16700)
+
+
+Started GET "/remove_card/9" for 10.68.7.4 at 2021-08-24 03:09:45 +0000
+Processing by DecklistController#remove as HTML
+  Parameters: {"dc_id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[36mDecklist Load (0.2ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/decklist_controller.rb:46:in `remove'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/decklist_controller.rb:48:in `remove'
+  [1m[36mDecklist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "decklists" WHERE "decklists"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/decklist_controller.rb:48:in `remove'
+  [1m[35m (43.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/decklist_controller.rb:48:in `remove'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/decklist
+Completed 302 Found in 50ms (ActiveRecord: 44.1ms | Allocations: 4560)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:09:45 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 1271.4ms | Allocations: 10060)
+Completed 200 OK in 1275ms (Views: 1273.3ms | ActiveRecord: 0.3ms | Allocations: 12233)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:09:53 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 1280.3ms | Allocations: 10059)
+Completed 200 OK in 1284ms (Views: 1282.1ms | ActiveRecord: 0.4ms | Allocations: 12214)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:09:58 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 1241.7ms | Allocations: 10059)
+Completed 200 OK in 1246ms (Views: 1243.5ms | ActiveRecord: 0.3ms | Allocations: 12214)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:10:02 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 2142ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 11427)
+
+
+Started GET "/name?query_name=Steelix" for 10.68.7.4 at 2021-08-24 03:10:18 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Steelix"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.3ms | Allocations: 282)
+Completed 200 OK in 1204ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 10084)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:10:30 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 1288ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 11431)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:10:31 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1287ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 11472)
+
+
+Started GET "/name?query_name=Onix" for 10.68.7.4 at 2021-08-24 03:10:37 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Onix"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.3ms | Allocations: 252)
+Completed 200 OK in 1120ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 9282)
+
+
+Started GET "/pokemon/hgss2-56" for 10.68.7.4 at 2021-08-24 03:11:00 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss2-56"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.2ms | Allocations: 28)
+Completed 200 OK in 641ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 5064)
+
+
+Started POST "/insert_card" for 10.68.7.4 at 2021-08-24 03:11:08 +0000
+Processing by DecklistController#add as HTML
+  Parameters: {"query_card_id"=>"hgss2-56", "query_quantity"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[36mDecklist Create (0.3ms)[0m  [1m[32mINSERT INTO "decklists" ("user_id", "created_at", "updated_at", "quantity", "card_id") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["created_at", "2021-08-24 03:11:08.903876"], ["updated_at", "2021-08-24 03:11:08.903876"], ["quantity", 4], ["card_id", "hgss2-56"]]
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[35m (26.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/decklist
+Completed 302 Found in 35ms (ActiveRecord: 27.5ms | Allocations: 4250)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:11:09 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 1963.8ms | Allocations: 14497)
+Completed 200 OK in 1968ms (Views: 1965.7ms | ActiveRecord: 0.4ms | Allocations: 16677)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:11:16 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 496)
+Completed 200 OK in 1274ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 11424)
+
+
+Started GET "/name?query_name=Steel" for 10.68.7.4 at 2021-08-24 03:11:27 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Steel"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 533ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 5145)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:11:35 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 496)
+Completed 200 OK in 1278ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 11418)
+
+
+Started GET "/name?query_name=Steelix" for 10.68.7.4 at 2021-08-24 03:11:56 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Steelix"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.3ms | Allocations: 282)
+Completed 200 OK in 1247ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 10134)
+
+
+Started GET "/pokemon/hgss2-87" for 10.68.7.4 at 2021-08-24 03:12:11 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss2-87"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+Completed 200 OK in 520ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 5083)
+
+
+Started GET "/rails/db/tables/decklists/data" for 10.68.7.4 at 2021-08-24 03:12:32 +0000
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"decklists"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "decklists"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.7ms | Allocations: 141)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 10.6ms | Allocations: 9184)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 9.0ms | Allocations: 7162)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 3.0ms | Allocations: 1164)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.4ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.6ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.5ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.4ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.5ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.5ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.7ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.9ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.7ms | Allocations: 110)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 80.5ms | Allocations: 43421)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 81.8ms | Allocations: 43787)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 2.2ms | Allocations: 1883)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 1.0ms | Allocations: 438)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.7ms | Allocations: 453)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 2.2ms | Allocations: 1714)
+Completed 200 OK in 135ms (Views: 83.5ms | ActiveRecord: 14.1ms | Allocations: 61547)
+
+
+Started POST "/insert_card" for 10.68.7.4 at 2021-08-24 03:12:43 +0000
+Processing by DecklistController#add as HTML
+  Parameters: {"query_card_id"=>"hgss2-87", "query_quantity"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[36mDecklist Create (0.3ms)[0m  [1m[32mINSERT INTO "decklists" ("user_id", "created_at", "updated_at", "quantity", "card_id") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["created_at", "2021-08-24 03:12:43.482502"], ["updated_at", "2021-08-24 03:12:43.482502"], ["quantity", 4], ["card_id", "hgss2-87"]]
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[35m (27.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/decklist
+Completed 302 Found in 35ms (ActiveRecord: 28.3ms | Allocations: 4232)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:12:43 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 2656.1ms | Allocations: 18989)
+Completed 200 OK in 2661ms (Views: 2658.3ms | ActiveRecord: 0.3ms | Allocations: 21326)
+
+
+Started GET "/rails/db/tables/decklists/data" for 10.68.7.4 at 2021-08-24 03:12:50 +0000
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"decklists"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "decklists"[0m
+  Rendering /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 5.6ms | Allocations: 7314)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 5.2ms | Allocations: 7158)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.9ms | Allocations: 899)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.8ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.7ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.2ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.7ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.6ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.4ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.6ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.5ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.5ms | Allocations: 895)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/_data.html.erb (Duration: 55.2ms | Allocations: 39388)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 55.3ms | Allocations: 39455)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.1ms | Allocations: 1192)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.5ms | Allocations: 216)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.1ms | Allocations: 173)
+  Rendered /home/gitpod/.rvm/ruby-2.6.6/gems/rails_db-2.3.1/app/views/rails_db/shared/_footer.html.erb (Duration: 0.7ms | Allocations: 648)
+Completed 200 OK in 90ms (Views: 53.5ms | ActiveRecord: 11.6ms | Allocations: 52876)
+
+
+Started GET "/remove_card/12" for 10.68.7.4 at 2021-08-24 03:13:09 +0000
+Processing by DecklistController#remove as HTML
+  Parameters: {"dc_id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/decklist_controller.rb:46:in `remove'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/decklist_controller.rb:48:in `remove'
+  [1m[36mDecklist Destroy (0.3ms)[0m  [1m[31mDELETE FROM "decklists" WHERE "decklists"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/decklist_controller.rb:48:in `remove'
+  [1m[35m (28.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/decklist_controller.rb:48:in `remove'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/decklist
+Completed 302 Found in 35ms (ActiveRecord: 28.6ms | Allocations: 4531)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:13:09 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 2163.1ms | Allocations: 14497)
+Completed 200 OK in 2168ms (Views: 2165.3ms | ActiveRecord: 0.4ms | Allocations: 16682)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:15:36 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 496)
+Completed 200 OK in 1280ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 11433)
+
+
+Started GET "/sign_out" for 10.68.7.4 at 2021-08-24 03:15:47 +0000
+Processing by UserAuthenticationController#goodbye as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1052)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:15:47 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 1267ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 11436)
+
+
+Started GET "/sign_in" for 10.68.7.4 at 2021-08-24 03:15:49 +0000
+Processing by UserAuthenticationController#login as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 2077)
+
+
+Started GET "/sign_up" for 10.68.7.4 at 2021-08-24 03:15:51 +0000
+Processing by UserAuthenticationController#sign_up as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/create.html.erb within layouts/application
+  Rendered user/create.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2055)
+
+
+Started POST "/insert_user" for 10.68.7.4 at 2021-08-24 03:16:23 +0000
+Processing by UserAuthenticationController#create as HTML
+  Parameters: {"query_email"=>"richard.ig.nava@gmail.com", "query_user_name"=>"TwoZeroEight", "query_password"=>"[FILTERED]", "query_password_confirmation"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "richard.ig.nava@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "richard.ig.nava@gmail.com"], ["password_digest", "$2a$12$hJIY12aNmI30INX.1QRK8uq0.8NThllL1m9JOB1ajxcs0AoE30DWq"], ["username", "TwoZeroEight"], ["created_at", "2021-08-24 03:16:23.960579"], ["updated_at", "2021-08-24 03:16:23.960579"]]
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+  [1m[35m (29.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_authentication_controller.rb:29:in `create'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 255ms (ActiveRecord: 29.8ms | Allocations: 5476)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:16:24 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 1345ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 11421)
+
+
+Started GET "/sign_in" for 10.68.7.4 at 2021-08-24 03:16:30 +0000
+Processing by UserAuthenticationController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering user/login.html.erb within layouts/application
+  Rendered user/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2063)
+
+
+Started POST "/user_verify_credentials" for 10.68.7.4 at 2021-08-24 03:16:36 +0000
+Processing by UserAuthenticationController#create_cookie as HTML
+  Parameters: {"query_email"=>"richard.ig.nava@gmail.com", "query_password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "richard.ig.nava@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_authentication_controller.rb:50:in `create_cookie'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/
+Completed 302 Found in 259ms (ActiveRecord: 0.3ms | Allocations: 1807)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:16:36 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1279ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 11463)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:16:48 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.2ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1311)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 3461)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:16:50 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1322ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 11425)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:18:13 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 792)
+Completed 200 OK in 1416ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 12918)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:18:27 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 787)
+Completed 200 OK in 1331ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 12913)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:18:38 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1601)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 4415)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:18:41 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 496)
+Completed 200 OK in 1289ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 11422)
+
+
+Started GET "/name?query_name=Scizor" for 10.68.7.4 at 2021-08-24 03:18:54 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Scizor"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.8ms | Allocations: 610)
+Completed 200 OK in 1262ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 10594)
+
+
+Started GET "/pokemon/hgss3-84" for 10.68.7.4 at 2021-08-24 03:19:03 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"hgss3-84"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 1.3ms | Allocations: 854)
+Completed 200 OK in 501ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 6537)
+
+
+Started POST "/insert_card" for 10.68.7.4 at 2021-08-24 03:19:07 +0000
+Processing by DecklistController#add as HTML
+  Parameters: {"query_card_id"=>"hgss3-84", "query_quantity"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[36mDecklist Create (0.5ms)[0m  [1m[32mINSERT INTO "decklists" ("user_id", "created_at", "updated_at", "quantity", "card_id") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["created_at", "2021-08-24 03:19:07.316278"], ["updated_at", "2021-08-24 03:19:07.316278"], ["quantity", 4], ["card_id", "hgss3-84"]]
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+  [1m[35m (30.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/decklist_controller.rb:31:in `add'
+Redirected to https://3000-indigo-halibut-9n681vgy.ws-us16.gitpod.io/decklist
+Completed 302 Found in 39ms (ActiveRecord: 31.0ms | Allocations: 4233)
+
+
+Started GET "/decklist" for 10.68.7.4 at 2021-08-24 03:19:07 +0000
+Processing by DecklistController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering decklist/view.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("decklists"."quantity") FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/decklist/view.html.erb:2
+  [1m[36mDecklist Load (0.1ms)[0m  [1m[34mSELECT "decklists".* FROM "decklists" WHERE "decklists"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/decklist/view.html.erb:28
+  Rendered decklist/view.html.erb within layouts/application (Duration: 875.1ms | Allocations: 5736)
+Completed 200 OK in 880ms (Views: 877.8ms | ActiveRecord: 0.3ms | Allocations: 7907)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:19:09 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 496)
+Completed 200 OK in 1278ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 11431)
+
+
+Started GET "/name?query_name=scizorr" for 10.68.7.4 at 2021-08-24 03:19:13 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"scizorr"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 237ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 3478)
+
+
+Started GET "/name?query_name=red+red+red" for 10.68.7.4 at 2021-08-24 03:19:25 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"red red red"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 64)
+Completed 200 OK in 631ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 5909)
+
+
+Started GET "/name?query_name=scizor+gx+ex" for 10.68.7.4 at 2021-08-24 03:19:35 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"scizor gx ex"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 44)
+Completed 200 OK in 638ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 5687)
+
+
+Started GET "/types" for 10.68.7.4 at 2021-08-24 03:21:49 +0000
+Processing by ChooseController#type as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering choose/type.html.erb within layouts/application
+  Rendered choose/type.html.erb within layouts/application (Duration: 1.0ms | Allocations: 579)
+Completed 200 OK in 425ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 5940)
+
+
+Started GET "/sets" for 10.68.7.4 at 2021-08-24 03:22:04 +0000
+Processing by ChooseController#sets as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering choose/sets.html.erb within layouts/application
+  Rendered choose/sets.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1431)
+Completed 200 OK in 1428ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 11221)
+
+
+Started GET "/sets/neo3" for 10.68.7.4 at 2021-08-24 03:22:08 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"neo3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 1.0ms | Allocations: 973)
+Completed 200 OK in 2213ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 17229)
+
+
+Started GET "/sets/ex4" for 10.68.7.4 at 2021-08-24 03:22:17 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"ex4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 0.8ms | Allocations: 875)
+Completed 200 OK in 2877ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 20821)
+
+
+Started GET "/sets/ex11" for 10.68.7.4 at 2021-08-24 03:22:36 +0000
+Processing by ShowController#setlist as HTML
+  Parameters: {"set"=>"ex11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering show/setlist.html.erb within layouts/application
+  Rendered show/setlist.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1102)
+Completed 200 OK in 3351ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 23954)
+
+
+Started GET "/pokemon/ex11-9" for 10.68.7.4 at 2021-08-24 03:22:49 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"ex11-9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.2ms | Allocations: 41)
+Completed 200 OK in 516ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 5103)
+
+
+Started GET "/pokemon/ex11-1" for 10.68.7.4 at 2021-08-24 03:23:13 +0000
+Processing by ViewController#card_info as HTML
+  Parameters: {"id"=>"ex11-1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering view/card_info.html.erb within layouts/application
+  Rendered view/card_info.html.erb within layouts/application (Duration: 0.2ms | Allocations: 29)
+Completed 200 OK in 509ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 5044)
+
+
+Started GET "/" for 10.68.7.4 at 2021-08-24 03:23:47 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 496)
+Completed 200 OK in 1338ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 11439)
+
+
+Started GET "/name?query_name=Zamazenta" for 10.68.7.4 at 2021-08-24 03:23:58 +0000
+Processing by HomeController#name as HTML
+  Parameters: {"query_name"=>"Zamazenta"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `load_current_user'
+  Rendering home/search.html.erb within layouts/application
+  Rendered home/search.html.erb within layouts/application (Duration: 0.1ms | Allocations: 84)
+Completed 200 OK in 695ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 6328)
+
+
