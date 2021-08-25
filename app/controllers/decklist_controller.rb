@@ -47,7 +47,7 @@ end
 
     removing_card.destroy
 
-    redirect_to("/decklist", { :notice => "Bookmark deleted successfully."} )
+    redirect_to("/decklist", { :notice => "Card removed from decklist."} )
   end
 
 
