@@ -167,7 +167,8 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    git (1.9.1)
+    git (1.13.0)
+      addressable (~> 2.8)
       rchardet (~> 1.8)
     globalid (0.5.2)
       activesupport (>= 5.0)
